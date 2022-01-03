@@ -1,7 +1,7 @@
 #IMPORTS
 import math 
 import random                                                               #For the random placement of the Food
-import pygame                                                               #Program for the 
+import pygame                                                               #Program for the game
 import tkinter as tk                                                        #Message box once the game is over
 from tkinter import messagebox
 
@@ -45,7 +45,7 @@ class cubes(object):                                                        #Cha
     row = x                                                                 #Rows in the program.
     w = y                                                                   #The size of the Program
     def __init__(player,start,dirnx=1,dirny=0,color=(15,56,15)):
-        player.pos = start                                                  #Init programs the player's bocy by cubes.
+        player.pos = start                                                  #Init programs the player's body by cubes.
         player.dirnx = 1                            
         player.dirny = 0
         player.color = color
@@ -65,7 +65,7 @@ class cubes(object):                                                        #Cha
             centre = dis//2
             radius = 3
             circleMiddle = (i*dis+centre-radius,j*dis+8)                    #This accurately determine where the eyes go the same way when the snake moves.
-            circleMiddle2 = (i*dis + dis -radius*2, j*dis+8)                #Same but move a little bit more
+            circleMiddle2 = (i*dis + dis -radius*2, j*dis+8)                #Same but moves a little bit more to the right
             pygame.draw.circle(surface, (155,188,15), circleMiddle, radius) #Color and Location of the Eyes
             pygame.draw.circle(surface, (155,188,15), circleMiddle2, radius)# Color and Location of the other eye
 
